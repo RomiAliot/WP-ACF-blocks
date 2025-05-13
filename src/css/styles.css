@@ -1,0 +1,82 @@
+@import "./tailwind.css";
+@import "./typography.css";
+@import "./gravity-forms.css";
+@import "./mailchimp.css";
+@import "./custom-blocks.css";
+
+html {
+    @apply scroll-smooth scroll-pt-[25vh];
+}
+
+body {
+    @apply font-body text-bold-900 overflow-x-hidden leading-[1.8];
+}
+
+main ul {
+    @apply list-disc list-inside;
+}
+
+p {
+    @apply pb-0;
+}
+
+body .hero-subtitle {
+    @apply lg:font-headings lg:text-[32px] lg:max-w-[578px] mx-auto lg:leading-[normal];
+}
+
+.swiper-pagination-bullet {
+    width: 24px;
+    border-radius: 0;
+    height: 2px;
+}
+.swiper-pagination-bullet-active {
+    @apply bg-primary;
+}
+input {
+    @apply rounded-none;
+}
+.button,
+input[type="submit"],
+input[type="button"] {
+    @apply px-6 py-4 bg-black text-white flex gap-2 items-center font-headings justify-center cursor-pointer hover:bg-accent hover:text-white hover:border-accent  border border-bold-900 transition-colors;
+}
+
+.button.button--ghost {
+    @apply bg-transparent border-none text-bold-900 py-2 -my-2;
+}
+
+.label {
+    @apply flex justify-center gap-2 py-1.5 px-3 bg-bold-100 hover:bg-bold-300 cursor-pointer;
+}
+.label.active {
+    @apply text-white bg-bold-900;
+}
+.icon svg {
+    @apply stroke-black;
+}
+.active .icon svg {
+    @apply stroke-cyan-600;
+}
+.event-ongoing {
+    @apply bg-colorSuccess-100 text-colorSuccess-900;
+}
+.event-tomorrow {
+    @apply bg-colorWarning-200 text-colorWarning-800;
+}
+.event-ended {
+    @apply bg-colorError-50 text-colorError-800;
+}
+/* Tabs */
+#tabList .active {
+    border-bottom: solid 4px #0099f0;
+}
+
+.site-branding > a,
+.site-branding img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.site-branding img {
+    object-fit: contain;
+}

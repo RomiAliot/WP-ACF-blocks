@@ -1,0 +1,3 @@
+.testimonial-block__quote strong {
+    @apply text-accent;
+}

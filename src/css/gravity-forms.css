@@ -1,0 +1,365 @@
+/* Sensible defaults */
+.gform_wrapper input:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+.gform_wrapper textarea,
+.gform_wrapper select {
+    @apply w-full p-3 border-b border-bold-900 min-h-[54px];
+}
+
+.gform_wrapper textarea {
+    @apply border p-3;
+}
+.gform_wrapper textarea.small {
+    @apply h-36 min-h-36;
+}
+
+.gform_wrapper .gfield_label {
+    @apply font-headings text-base leading-[1.8] !font-medium text-bold-900 mb-2 block;
+}
+
+.wuxi-contact-form .gform_wrapper .ginput_complex label {
+    @apply font-headings !text-base leading-[1.8] !font-medium text-bold-900 mb-2 block;
+}
+
+.wuxi-contact-form .gform_fields .stay-in-touch {
+    @apply mb-4;
+}
+
+.wuxi-contact-form .gform_fields .stay-in-touch .ginput_container {
+    @apply !inline-flex items-center gap-2;
+}
+
+.wuxi-contact-form .ginput_container_consent input[type="checkbox"] {
+    @apply !w-auto w-4 border-bold-900 border-2 focus:ring-blue-700 h-4  text-blue-700 shadow-sm focus:border-blue-300;
+}
+
+.wuxi-contact-form .gform_fields .gfield_consent_label {
+    @apply font-body text-bold-900 font-normal text-[14px];
+}
+
+.gform_fields {
+    @apply flex flex-col md:grid gap-x-6 gap-y-8 grid-cols-1 md:grid-cols-6;
+}
+
+.wuxi-contact-form .gform_footer {
+    @apply justify-end flex;
+}
+
+.wuxi-contact-form .gform_footer input {
+    @apply w-[100%] md:w-[247px]  flex items-center;
+}
+
+.wuxi-contact-form .gform_wrapper .gfield_required .gfield_required_text {
+    @apply !hidden;
+}
+
+.wuxi-contact-form .contact-names {
+    @apply col-span-6;
+}
+
+.wuxi-contact-form .name_last label {
+    @apply pt-8 md:pt-0;
+}
+
+.wuxi-contact-form .contact-names .has_first_name {
+    @apply md:flex  gap-6;
+}
+
+.wuxi-contact-form .gform_fields {
+    @apply flex flex-col md:grid;
+}
+
+.wuxi-contact-form .contact-names .has_first_name .name_first,
+.wuxi-contact-form .contact-names .has_first_name .name_last {
+    @apply md:w-[46%];
+}
+
+.wuxi-contact-form .contact-names .gfield_label_before_complex {
+    @apply hidden;
+}
+
+.wuxi-contact-form .gfield_required_text {
+    @apply hidden;
+}
+
+.wuxi-contact-form .gfield_label {
+    @apply flex gap-1;
+}
+
+.wuxi-contact-form .contact-names .name_first label,
+.wuxi-contact-form .contact-names .name_last label {
+    @apply font-headings font-medium flex;
+}
+
+.wuxi-contact-form .gfield .gfield_required:after,
+.wuxi-contact-form .contact-names .name_first label:after,
+.wuxi-contact-form .contact-names .name_last label:after {
+    content: "*" !important;
+    transform: scale(1.4);
+    position: relative;
+    color: #cf2e2e;
+    display: block;
+}
+
+.gform_fields .gfield {
+    @apply relative flex flex-col;
+}
+
+.gfield--width-full {
+    @apply col-span-1 md:col-span-6;
+}
+
+.gfield--width-half {
+    @apply col-span-1 md:col-span-3;
+}
+
+.gfield--width-third {
+    @apply col-span-1 md:col-span-2;
+}
+
+.gform_page_footer, .gform_footer {
+    @apply mt-14 flex gap-6 lg:gap-12;
+}
+
+.gform_page_footer .gform_previous_button {
+    @apply bg-transparent text-bold-900 border border-bold-900;
+}
+
+.gfield_required_asterisk {
+    @apply text-error ml-1;
+}
+
+/* Step navigation */
+.gf_page_steps {
+    @apply mb-12 flex gap-2 md:gap-14 border-b border-bold-400;
+}
+
+.gf_step {
+    @apply pb-4 md:pb-8 font-headings text-base font-semibold text-bold-900 leading-moderate;
+}
+
+.gf_step.gf_step_active {
+    @apply border-b-4 border-accent;
+}
+
+.gf_step a .gf_step_label {
+    text-decoration: none !important;
+}
+
+.gf_step:has(a:hover) {
+    @apply border-b-2 border-bold-900;
+}
+
+.gf_step_number,
+.gf_step_label {
+    font: inherit;
+}
+.gf_step_number::after {
+    content: ". ";
+}
+
+body .gravity-theme .gpmpn-page-link:hover .gf_step_number {
+    background-color: transparent;
+}
+
+/* Validation */
+.validation_message {
+    @apply text-error p-3 -mb-4;
+}
+
+body .gform_fields .gfield_error {
+    @apply pb-4;
+}
+
+.ginput_container {
+    @apply relative;
+}
+
+body .gform_fields .gfield_error .ginput_container::after {
+    content: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.47012 21.4999H19.5301C21.0701 21.4999 22.0301 19.8299 21.2601 18.4999L13.7301 5.48993C12.9601 4.15993 11.0401 4.15993 10.2701 5.48993L2.74012 18.4999C1.97012 19.8299 2.93012 21.4999 4.47012 21.4999ZM12.0001 14.4999C11.4501 14.4999 11.0001 14.0499 11.0001 13.4999V11.4999C11.0001 10.9499 11.4501 10.4999 12.0001 10.4999C12.5501 10.4999 13.0001 10.9499 13.0001 11.4999V13.4999C13.0001 14.0499 12.5501 14.4999 12.0001 14.4999ZM13.0001 18.4999H11.0001V16.4999H13.0001V18.4999Z" fill="%23E3433E"/></svg>');
+    @apply absolute top-1 right-0 mt-2 mr-2;
+}
+
+body .gform_fields .checkbox-grid .ginput_container::after {
+    top: calc(100% + 0.25rem);
+}
+
+body .gform_fields .gfield_error :is(input, textarea) {
+    @apply !border-b-2 !border-error;
+}
+
+.gform_validation_errors {
+    @apply text-white relative -top-12 left-0 right-0 p-4 bg-error z-50 backdrop-blur;
+}
+.event-form .gform_validation_errors {
+    @apply text-white relative -top-4 left-0 right-0 p-4 bg-error z-50 backdrop-blur;
+}
+.gform_validation_errors h2 {
+    @apply font-headings text-lg font-semibold text-inherit;
+}
+
+.gform_heading {
+    @apply hidden;
+}
+
+/* Checkboxes */
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]) + label {
+    @apply font-body text-base leading-[1.8] !text-bold-900 relative pl-8 cursor-pointer select-none;
+}
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]) + label:has(small) {
+    @apply leading-tight;
+}
+body .gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]) {
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+    pointer-events: none;
+    /* I don't hide the element with display: none bacause it breaks tab key navigation */
+}
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]) + label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gform_wrapper.gravity-theme .gfield-choice-input[type="radio"] + label::before {
+    border-radius: 1000px;
+}
+
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]) + label::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    background-color: #ebeff4;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]) + label:hover::after,
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"]):is(:focus, :focus-visible) + label::after {
+    opacity: 1;
+}
+
+.gchoice:has(input:focus-visible), .ginput_container_consent:has(input:focus-visible) {
+    @apply outline outline-2 outline-accent;
+}
+
+.gform_wrapper.gravity-theme :is(.gfield-choice-input, .ginput_container_consent > input[type="checkbox"])[type="checkbox"]:checked + label::before {
+    background-image: url('data:image/svg+xml,<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 11.0001L0 6.00008L1.41 4.59008L5 8.17008L12.59 0.580078L14 2.00008L5 11.0001Z" fill="white"/></svg>');
+    /* background-size: 80%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: appear 0.1s;
+    @apply bg-accent border-accent;
+}
+
+.gform_wrapper.gravity-theme .gfield-choice-input[type="radio"]:checked + label::before {
+    @apply bg-accent p-0.5 bg-clip-content border-accent;
+}
+
+@keyframes appear {
+    from {
+        background-size: 50%;
+    }
+    to {
+        background-size: 80%;
+    }
+}
+
+.gfield_checkbox .gchoice small {
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+.checkbox-grid :is(.gfield_checkbox, .gfield_radio) {
+    @apply grid lg:grid-cols-3 gap-4 items-center;
+}
+
+.gchoice label {
+    @apply flex gap-1 leading-extra-tight text-balance;
+}
+
+.gchoice {
+    @apply relative;
+}
+
+.gfield_label + .gfield_description {
+    @apply -mt-2 block text-sm text-bold-600 mb-4;
+}
+
+input[type="button"].gform_last_page_button {
+    @apply hidden;
+}
+
+.gf_step_pending {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.gfield.gfield_visibility_hidden {
+    @apply hidden;
+}
+
+.car-tcr-form .gform_footer {
+    /* flex-direction: column;
+    align-items: center; */
+    margin-top: 50px !important;
+}
+
+@media (min-width: 1024px) {
+    .car-tcr-form .gform_footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.car-tcr-form
+    .gform_wrapper.gravity-theme
+    input[type="submit"]:not([type="radio"]):not([type="checkbox"]):not([type="image"]):not([type="file"]) {
+    width: 100%;
+    max-width: 332px;
+    padding-block: 1rem !important;
+    display: block;
+    margin-inline: auto;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: background-color 0.2s;
+}
+
+.gfield.hidden_label .gfield_label {
+    @apply hidden;
+}
+
+.gfield.pull-up {
+    @apply -mt-6;
+}
+.gfield--type-honeypot {
+    height: 0;
+}
+
+/*** lima landing form styles ***/
+
+@media (min-width: 768px) {
+  .lima-landing-form .has_first_name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+  }
+}
+
+.lima-landing-form .gfield_contains_required.justify-end{
+  justify-content: end;
+}
+
